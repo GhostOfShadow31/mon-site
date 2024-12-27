@@ -1,0 +1,454 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="Python_Style.css"/>
+        <title>
+            Menu Déroulant
+        </title>
+    </head>
+    <body>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#introduction">Introduction</a>
+            <a href="#progra">Programmation</a>
+        </nav>
+        <button type="button" aria-label="toggle curtain navigation" class="nav-toggler">
+            <span class="line l1"></span>
+            <span class="line l2"></span>
+            <span class="line l3"></span>
+        </button>
+
+        <script src="Python_JavaScript.js"></script>
+        
+        <section class="home" id="home">
+            <h1>Apprendre <br/> <span>Le Python</span></h1>
+        </section>
+        <div class="corps">
+            <span class="separator"> </span>
+
+
+            <div class="intro" id="introduction">
+                <h2>
+                    Introduction :
+                </h2>
+                <p>
+                    <br/>Python est un langage de programmation c'est-à-dire un langage informatique destiné à formuler des algorithmes et 
+                    produire des programmes informatiques qui les appliquent. D'une manière similaire à une langue naturelle, un langage 
+                    de programmation est composé d'un alphabet, d'un vocabulaire, de règles de grammaire, de significations, mais aussi 
+                    d'un environnement de traduction censé rendre sa syntaxe compréhensible par la machine.<br/><br/>
+                    
+                    Python a été développé en 1989 par <a href="https://fr.wikipedia.org/wiki/Guido_van_Rossum">Guido Van Rossum</a>, à
+                    l'Université d'Amsterdam. Guido Von Rossum était un fan de la série 
+                    <a href="https://fr.wikipedia.org/wiki/Monty_Python%27s_Flying_Circus">Monthy Python's Flying Circus</a> d'où 
+                    l'origine du nom de son langage de programmation.<br/><br/>
+
+                    <span1 class="remarque">Remarque :</span1> Un 
+                    <a href="https://www.france-ioi.org/algo/course.php?idChapter=561&idCourse=2368">langage interprété</a> 
+                    (contrairement à un <a href="https://www.france-ioi.org/algo/course.php?idChapter=561&idCourse=2368">langage compilé</a>) 
+                    est retranscrit en langage machine au fur et à mesure de son exécution via un interprète.<br/><br/>
+
+                    Python est devenu un langage de programmation généraliste très utilisé autant dans l'industrie que dans le milieu
+                    académique et scolaire. Python est un langage open source (libre de droit et gratuit développé et utilise par une
+                    large communauté d'utilisateurs : soit 300 000 utilisateurs et plus de 500 000 téléchargements par an).
+                </p>
+            </div>
+
+            <span class="separator"> </span>
+
+            <div class="programmation" id="progra">
+                <h2>
+                    La Programmation :
+                </h2>
+                <h3>
+                    <br/><br/>I - Les différents types de données :
+                </h3>
+                <p>
+                    <br/>Il existe principalement 4 types de données dans Python :<br/>
+                </p>
+                <ul>
+                    <li><a href="#">Les entiers (integers)</a> : ce sont les nombres entiers (1, 2, 3, etc)</li><br/>
+                    <li><a href="#">Les flottants (floats)</a> : ce sont les nombres décimaux (1.5, 2.13, 3.0, etc)</li><br/>
+                    <li><a href="#">Les booléens (booleans)</a> : ce sont des valeurs binaires (True / False)</li><br/>
+                    <li><a href="#">Les chaînes de caractères (strings)</a> : ce sont des équences de caractères ("hello", "world", etc)</li><br/>
+                </ul>
+                <p>
+                    Bien sûr, il existe des types de données plus compliquées tel que <a href="#">les listes (lists)</a>, 
+                    <a href="#">les tuples (tuples)</a>, <a href="#">les ensembles (sets)</a>, <a href="#">les dictionnaires (dictionaries)</a>.<br/>
+                    Certains modules de bibliothèques standarts permettent d'utiliser d'autre type de données comme 
+                    <a href="#">les tableaux (arrays)</a>,  <a href="#">les dates (dates)</a>, <a href="#">les heures (times)</a>, etc.<br/><br/>
+                    Il est tout-à-faitement possible de convertir des types de données entre eux.
+                </p>
+                <h3>
+                    <br/><br/>Exemples :
+                </h3>
+                <table>
+                    <tr>
+                        <td>Expression :</td>
+                        <td><code>>>> type(3)</code></td>
+                        <td><code>>>> type(2.0)</code></td>
+                    </tr>
+                    <tr>
+                        <td>Résultat :</td>
+                        <td><code>class 'int'</code></td>
+                        <td><code>class 'float'</code></td>
+                    </tr>
+                </table>
+                <p>
+                    On demande d'abord avec l'instruction <code>type(3)</code> quel est le type de donnée de 3, et la console renvoie
+                    <code>class 'int'</code> pour integers, donc un nombre entier.<br/>
+                    Puis ensuite, on demande le type de valeur de 2.0 et la console renvoie cette fois <code>class 'float'</code>,
+                    on pourrait croire que c'est un nombre entier mais dès qu'on a un valeur décimale et ce même si elle est nulle 
+                    (ici c'est 0 la valeur décimale), la valeur est considérée comme flottant.<br/><br/>
+                    On peut aussi changer un type de variable, par exemple si on reprend 2.0 qui est un nombre flottant et que 
+                    l'on stock dans la variable <code>x</code>, on peut écrire :<br/>
+                </p>
+                <div class="code">
+                    <code>x = 2.0<br/>x = int(x)</code>
+                </div>
+                <p>
+                    La valeur de <code>x</code> qui était float devient donc int, <code>x</code> contient donc la valeur "2".<br/>
+                    <span1 class="remarque">Remarque :</span1> si la valeur de <code>x</code> est un nombre avec une valeur décimale non-nulle, 
+                    alors Python arrondira à son entier inférieur par exemple :
+                </p>
+                <div class="code">
+                    <code>x = 3.7<br/>x = int(x)</code>
+                </div>
+                <p>
+                    <code>x</code> aura donc comme valeur finale "3" et commme type de donnée "integers".
+                </p>
+                <h3>
+                    <br/><br/>II - Les types d'opérations en Python :
+                </h3>
+                <p>
+                    Python est capable d'efféctuer plusieurs types d'opérations, on dénombre 5 grandes familles :
+                </p>
+                <ol><br/>
+                    <li>
+                        Opérations arithmétiques :
+                        <ul><br/>
+                            <li>Addition ( + )</li>
+                            <li>Soustraction ( - )</li>
+                            <li>Multiplication ( * )</li>
+                            <li>Division ( / )</li>
+                            <li>Division entière ou euclidienne ( // )</li>
+                            <li>Modulo, le reste d'une division entière ( % )</li>
+                            <li>Puissance ( ** )</li>
+                        </ul>
+                    </li><br/>
+                    <li>
+                        Opérations de comparaisons :
+                        <ul><br/>
+                            <li>Egalité ( == )</li>
+                            <li>Différence ( != )</li>
+                            <li>Infériorité strictement ( < )</li>
+                            <li>Supériorité strictement ( > )</li>
+                            <li>Infériorité ou égalité ( <= )</li>
+                            <li>Supériorité ou égalité ( >= )</li>
+                        </ul>
+                    </li><br/>
+                    <li>
+                        Opérations logiques :
+                        <ul><br/>
+                            <li>ET logique ( and )</li>
+                            <li>OU logique ( or )</li>
+                            <li>OU EXCLUSIF logique ( ^ )</li>
+                            <li>NON logique ( not )</li>
+                        </ul>
+                    </li><br/>
+                    <li>
+                        Opérations d'appartenances :
+                        <ul><br/>
+                            <li>Appartenance à une séquence ( in )</li>
+                            <li>Non-appartenance à une séquence ( not in )</li>
+                        </ul>
+                    </li><br/>
+                    <li>
+                        Opérations d'identités :
+                        <ul><br/>
+                            <li>Identité d'objet ( is )</li>
+                            <li>Non-identité d'objet ( is not )</li>
+                        </ul>
+                    </li><br/>
+                </ol>
+                <h3>
+                    <br/><br/>Exemples :
+                </h3>
+                <table>
+                    <tr>
+                        <td>Arithmétique :</td>
+                        <td><code>2 + 9</code></td>
+                        <td>Ici on fait une simple addition, la console renvoie 11</td>
+                    </tr>
+                    <tr>
+                        <td>Comparaison :</td>
+                        <td><code>if x >= 20 :</code></td>
+                        <td>Ici on demande avec l'instruction conditionnel if si <code>x</code> (supposé un entier ou flottant) est supérieur 
+                            ou égale à 20</td>
+                    </tr>
+                    <tr>
+                        <td>Loqique :</td>
+                        <td><code>if x >= 20 and y != 14 :</code></td>
+                        <td>Même chose sauf que l'on cumule deux conditions dans la même instruction à savoir si <code>x</code> est supérieur ou égal 
+                            à 20 ET que <code>y</code> est différent de 14</td>
+                    </tr>
+                    <tr>
+                        <td>Appartenance:</td>
+                        <td><code>if x in liste :</code></td>
+                        <td>Ici on demande si <code>x</code> est présent dans la variable <code>liste</code> (qui est évidemment supposée être une liste)</td>
+                    </tr>
+                    <tr>
+                        <td>Identité :</td>
+                        <td><code>x is y</code></td>
+                        <td>Ici c'est un cas un peu spécial ou l'on demande si <code>x</code> est <code>y</code>, on abordera plus en détails les opérations 
+                            d'identités juste après
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                     Dans le programme ci-dessous, on crée une liste que l'on stock dans la variable <code>x</code> puis une seconde, 
+                    identitque, que l'on stock dans la variable <code>y</code>.<br/>
+                    Puis on crée la variable <code>z</code> et on lui attribut la variable <code>x</code>.<br/>
+                    Enfin on efféctue l'opération d'identité <code>x is y</code> puis <code>x is y</code> et on l'affiche :
+                </p>
+                <div class="code">
+                    <code>
+                        x = [1, 2, 3]<br/>
+                        y = [1, 2, 3]<br/>
+                        z = x<br/>
+                        print(x is y)<br/>
+                        print(x is z)<br/>
+                    </code>
+                </div>
+                <p>
+                    Le programme renvoie d'abord <code>False</code> puis <code>True</code> car <code>x</code> et <code>y</code> 
+                    contiennent les mêmes valeurs mais ne sont pas exactement les mêmes pour l'ordinateur, il différencie bien 
+                    <code>x</code> et <code>y</code> qui sont deux variables distinctes.<br/>
+                    Par contre la variable <code>z</code> qui a été créée à partir de la variable <code>x</code> est belle et bien identique 
+                    à cette dernière pour l'ordinateur.
+                </p>
+                <h3>
+                    III - Les différents modules (ou bibliothèques) :
+                </h3>
+                <p>
+                    Sur Python, il existe différents modules (ou bibliothèques) mais d'abord, qu'es-ce qu'un module Python ?<br/><br/>
+                    Un module, c'est un fichier contenant des définitions et des instructions Python. Les modules sont utilisés 
+                    pour organiser le code en groupant des fonctions, des classes et des variables dans un même endroit. Les 
+                    modules peuvent être importés et réutilisés dans d'autres programmes Python, ce qui permet une meilleure modularité 
+                    et une réutilisabilité du code.<br/><br/>
+                    On a par exemple les modules <code>math</code> détaillé ci-dessous, <code>turtle</code> et <code>tkinter</code> pour 
+                    le dessin, <code>pygame</code> pour créer des jeux, <code>random</code> pour des nombres aléatoires, <code>os</code> pour 
+                    fournir des fonctionnalités d'intéraction avec le système d'exploitation, <code>datetime</code> pour fournir des 
+                    classes et des fonctions permettant de manipuler des dates et des heures, etc.
+                </p>
+                <h4 id="module_math">
+                    Module Math :
+                </h4>
+                <p>
+                    Pour commencer, voyons comment importer un module dans votre programme.<br/>
+                    Il existe deux techniques différentes :<br/><br/>
+                </p>
+                <ul>
+                    <li><code>from math import *</code></li><br/>
+                    <li><code>import math</code></li><br/>
+                </ul>
+                <p>
+                    Dans le premier exemple, vous importez tout le module math grâce à <code>*</code> mais vous pouvez bien évidemment ciblez 
+                    certaines classes ou fonctions, si vous connaissez leurs noms, par exemple : <code>from math import pi, sqrt</code>. On a 
+                    importé le nombre <code>pi</code> et la fonction <code>sqrt</code> permettant de faire des racines carrées.<br/><br/>
+                    Dans le deuxième exemple, vous aurez besoin du préfixe <code>'module.'</code> pour appelez les fonctions, par exemple :
+                    <code>x = math.sqrt(144)</code>. Cette dernière méthode est conseillée pour éviter les conflits entre les noms des fonctions.<br/><br/>
+                    <span1 class="remarque">Remarque :</span1> Vous pouvez faire une racine carré sans le module math en tappant simplement <code>x**0.5</code>
+                    mais la console renverra un nombre flottant. Pour y remédier, utiliser ce que vous avez appris plus haut pour convertir 
+                    en nombre flottant en nombre entier !
+                </p>
+                <table>
+                    <tr>
+                        <td>Mathématiques :</td>
+                        <td>exp(x)</td>
+                        <td>In(x)</td>
+                        <td>sin(x)</td>
+                        <td>cos(x)</td>
+                        <td>pi</td>
+                        <td>√x</td>
+                    </tr>
+                    <tr>
+                        <td>Python :</td>
+                        <td>exp(x)</td>
+                        <td>In(x)</td>
+                        <td>sin(x)</td>
+                        <td>cos(x)</td>
+                        <td>pi</td>
+                        <td>sqrt(x)</td>
+                    </tr>
+                </table>
+                <p>
+                    <span1 class="remarque">Remarque :</span1> L'unité des angles avec le module math de Python est le radian. Pour calculer le cosinus 
+                    de 90°, il faudra donc écrire <code>cos(pi/2)</code>.
+                </p>
+                <h3>
+                    IV - Les différents types d'instructions :
+                </h3>
+                <p>Encore une fois, il existe plusieurs types d'instructions, on peut en dénombrer 5 grandes familles :</p>
+                <ul><br/>
+                    <li>Instructions d'affectations<br/></li><br/>
+                    <li>Instructions conditionnelles<br/></li><br/>
+                    <li>Instructions de définition de fonctions<br/></li><br/>
+                    <li>Instructions d'importations<br/></li><br/>
+                    <li>Instructions de sorties<br/></li><br/>
+                </ul>
+                <table>
+                    <tr>
+                        <td>Affectation :</td>
+                        <td><code>x = 5</code></td>
+                        <td>On affecte la valeur 5 à la variable <code>x</code></td>
+                    </tr>
+                    <tr>
+                        <td>Conditionnelle :</td>
+                        <td><code>if x < 7.8 :</code></td>
+                        <td>On demande si <code>x</code> est strictement inférieur à 7.8</td>
+                    </tr>
+                    <tr>
+                        <td>Définition de fonction :</td>
+                        <td><code>def function(x, y):</code></td>
+                        <td>On crée la fonction <code>function</code> qui prend pour argument <code>x</code> et <code>y</code></td>
+                    </tr>
+                    <tr>
+                        <td>Importation :</td>
+                        <td><code>import math</code></td>
+                        <td>On importe le module <code>math</code></td>
+                    </tr>
+                    <tr>
+                        <td>Sortie :</td>
+                        <td><code>print("Hello world")</code></td>
+                        <td>On fait apparaître à l'écran la chaîne de caractères <code>Hello wolrd</code></td>
+                    </tr>
+                </table>
+                <h4>
+                    Les instructions d'affectations :
+                </h4>
+                <p>
+                    Il existe différentes manières d'affecter une valeur à une variable, par exemple : <code>x = 5</code>, 
+                    mais il existe aussi une technique dite "plus rapide" : l'affectation multiple (ou parallèle) qui consiste
+                    à affecter plusieurs valeurs à plusieurs variables avec une ligne de code :<br/>
+                    <code>x, y, z = 1, 2.31, True</code>.<br/><br/>
+                    Ici, la variable <code>x</code> contient l'entier 1, la variable <code>y</code> contient le flottant 2.31, 
+                    la variable <code>z</code> contient le booléen True.<br/><br/>
+                    On peut aussi faire des opérations plus rapidement, par exemple au lieu d'écrire <code>x = x + 1</code>, on peut 
+                    écrire <code>x += 1</code>.<br/>
+                    Cela fonctionne pour toutes les opérations arithmétiques vues plus haut.
+                </p>
+                <h4>
+                    Les instructions conditionnelles :
+                </h4>
+                <p>
+                    Il existe 2 types d'instructions conditionnelles avec chacunes quelques variantes qui seront détaillées ici.<br/><br/>
+                    <ol><br/>
+                        <li> If, elif, else :
+                            <ul><br/>
+                                <li>
+                                    L'instruction <code>if</code> permet de vérifier une condition (littéralement "si" en français).<br/>
+                                    Par exemple : <code>if x != 20 :</code>. Ici on vérifie que <code>x</code> est différent de 20, si la condition 
+                                    est validée alors les lignes suivantes indentées seront lues par l'ordinateur.
+                                </li><br/>
+                                <li>
+                                    L'instruction <code>elif</code> permet de vérifier une deuxième condition si la première n'est 
+                                    pas validée (ce qui veut dire qu'un elif fonctionne tous le temps avec un if) : <code>if x != 20 :</code><br/>
+                                    <code>elif x == 18 :</code>. Ici, si <code>x</code> est différent de 20, alors on demande s'il est égal à 18.
+                                </li><br/>
+                                <li>
+                                    L'instruction <code>else</code> permet d'exécuter des lignes de codes si aucunes des vérifications 
+                                    ne sont validées (évidemment il fonctionne aussi avec un if) :<br/>
+                                    <code>if x != 20 :</code><br/><code>elif x == 18 :</code><br/><code>else :</code><br/>Si <code>x</code> est 
+                                    différent de 20 et qu'il n'est pas égal à 18 alors l'ordinateur exécute les lignes de codes indentées 
+                                    sous le else.
+                                </li><br/>
+                            </ul>
+                        </li><br/>
+                        <li> For & while :
+                            <ul><br/>
+                                <li>
+                                    La boucle for permet de répéter une opération un certain nombre de fois : <code>for i in range(x):</code>.<br/>
+                                    L'ordinateur va créer une variable temporaire nommée <code>i</code> qui est unique à la boucle et qui va prendre
+                                    successivement les valeurs de 0 à <code>x-1</code> donc <code>x</code> itérations.<br/><br/>
+                                    La fonction <code>range</code> peut prendre jusqu'à 3 arguments, voici un tableau pour les détails 
+                                    (on prendra pour exemple <code>print(i)</code> comme ligne de code excutée dans la boucle):<br/>
+                                    <table><br/>
+                                        <tr>
+                                            <td>Entrée</td>
+                                            <td>Sortie</td>
+                                            <td>Signification</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>range(5)</code></td>
+                                            <td><code>0, 1, 2, 3, 4</code></td>
+                                            <td><code>i</code> prend toutes les valeurs par pas de 1 à partir de 0 jusqu'à 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>range(2, 6)</code></td>
+                                            <td><code>2, 3, 4, 5</code></td>
+                                            <td><code>i</code> prend toutes les valeurs par pas de 1 à partir de 2 jusqu'à 6</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>range(1, 11, 2)</code></td>
+                                            <td><code>1, 3, 5, 7, 9</code></td>
+                                            <td><code>i</code> prend toutes les valeurs par pas de 2 à partir de 1 jusqu'à 11</td>
+                                        </tr>
+                                    </table>
+                                </li><br/>
+                                <li>
+                                    La boucle while permet de répéter une opération tant qu'une condition est  vérifiée : <code>while x == 1 :</code><br/>
+                                    Tant que <code>x</code> vaut 1, la condition se répètera en boucle, sans fin.<br/><br/>
+                                    <span1 class="remarque">Important :</span1> Il faut toujours faire très attention en manipulant cette boucle
+                                    car elle peut très facilement engendrer des débordements imprévus. Pensez à vérifier vous-même que la boucle s'arrêtera.<br/>
+                                    Dans le cas où Python ne réponds plus, appuyez sur <code>Ctrl + Alt + Suppr</code> puis click droit sur Python et clicker sur "Fin de la tâche"
+                                    Assurez-vous de bien avoir enregistrer le travail.
+                                </li><br/>
+                            </ul>
+                        </li><br/>
+                    </ol>
+                </p>
+                <p>
+                    <span1 class="remarque">Remarque :</span1> Vous pouvez évidemment mettre des instructions conditonnelles dans d'autres 
+                    instructions conditionnelles.<br/>
+                    Le caractère <code>:</code> est présent à la fin de l'instruction pour que l'ordinateur comprenne que les lignes 
+                    suivantes indentées font parties de l'instruction, c'est la syntaxe de Python.
+                </p>
+                <h4>
+                    Les instructions de définition de fonction :
+                </h4>
+                <p>
+                    Pour définir une fonction, il suffit d'écrire : <code>def function(x):</code> et on crée la fonction <code>function</code>
+                    avec <code>x</code> pour argument.<br/>
+                    Cela veut dire qu'en appelant la fonction en écrivant <code>function(5)</code>, alors l'ordinateur va exécuter les 
+                    lignes indentées de la fonction et la variable <code>x</code> prendra la valeur 5.<br/><br/>
+                    On peut appeler une fonction à l'intérieur d'elle-même :<br/>
+                </p>
+                <div class="code">
+                    <code>def add1(x):</code><br/>
+                    <code>-- x += 1</code><br/>
+                    <code>-- add1(x)</code>
+                </div>
+                <p>
+                    Cela s'appelle de la récursion et Python possède une limite qui est la "maximum recursion depth exceeded" 
+                    empêchant de genre de programme de se répéter à l'infini (généralement, il s'arrête à 99 itérations).
+                </p>
+                <h4>
+                    Les instructions d'importations :
+                </h4>
+                <p>
+                    Elles permettent d'importer des modules (ou bibliothèques), elles sont détaillées <a href="#module_math">plus haut</a>.
+                </p>
+                <h4>
+                    Les instructions de sorties :
+                </h4>
+                <p>
+                    Les instructions de sorties sont des instructions permettant l'affichage comme <code>print(x)</code> qui affiche 
+                    le contenu de la valeur <code>x</code>, à différencier de <code>print("x")</code> qui lui, affiche la chaîne de 
+                    caractères "x".<br/><br/>
+                    Mais il existe aussi <code>input</code> permettant à l'utilisateur de saisir une valeur : <code>x = input("Entrez une valeur")</code>.
+                    L'utilisateur saisi une valeur qui est stockée dans la variable <code>x</code>.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
